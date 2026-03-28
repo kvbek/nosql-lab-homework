@@ -2,8 +2,8 @@ from cassandra.cluster import Cluster
 from cassandra.query import PreparedStatement
 
 
-def cassandra_connect(hosts=None, keyspace="iot"):
-    cluster = Cluster(hosts or ["127.0.0.1"])
+def cassandra_connect(hosts=None, keyspace="lab_keyspace"):
+    cluster = Cluster(hosts or ["cassandra_nosql_lab"])
     session = cluster.connect(keyspace)
     return session
 

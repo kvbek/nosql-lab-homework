@@ -84,7 +84,7 @@ def parse_args():
     parser.add_argument("--table", required=True)
 
     # cassandra
-    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--host", default="cassandra_nosql_lab")
 
     # postgres
     parser.add_argument("--pg-conn", default="dbname=test user=postgres password=postgres host=localhost")

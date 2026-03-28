@@ -26,6 +26,7 @@ RUN /home/coder/nosql_venv/bin/pip install tqdm
 RUN /home/coder/nosql_venv/bin/pip install matplotlib
 RUN /home/coder/nosql_venv/bin/pip install sentence-transformers
 RUN /home/coder/nosql_venv/bin/pip install tabulate
+RUN /home/coder/nosql_venv/bin/pip install psycopg2-binary
 
 ENV PATH="/home/coder/nosql_venv/bin:$PATH"
 
