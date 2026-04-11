@@ -22,8 +22,21 @@ services:
     volumes:
       - qdrant_data:/qdrant/storage # - ./workspace/vector/qdrant_data:/qdrant/storage
 
+  postgres:
+    image: ankane/pgvector
+    container_name: pgvector_snoql_lab
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: vectordb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
 volumes:
   qdrant_data:
+  pgdata:
 
 # Code based on https://github.com/kjedrzejewski/podyplomowe_genai_public
 # Well done Krzysztof!
