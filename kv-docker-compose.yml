@@ -3,7 +3,7 @@ services:
     build:
       context: ./Docker/vscode
       dockerfile: Dockerfile
-    container_name: vscode_container
+    container_name: vscode_container_nosql_lab
     ports:
       - 127.0.0.1:8080:8080
     volumes:
